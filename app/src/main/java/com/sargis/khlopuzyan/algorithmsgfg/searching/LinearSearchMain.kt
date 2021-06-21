@@ -1,0 +1,45 @@
+package com.sargis.khlopuzyan.algorithmsgfg.searching
+
+/**
+ * Created by Sargis Khlopuzyan, on 6/21/2021.
+ *
+ * @author Sargis Khlopuzyan (sargis.khlopuzyan@fastshift.com)
+ */
+fun main() {
+    val array = arrayOf(1, 2, 3, 4, 5, 6, 7, 8, 9)
+    val result = linearSearch2(array, 9)
+//    val result = linearSearch1(array, 7)
+    if (result == -1)
+        println("Element is not present in array")
+    else
+        println("Element is present at index $result")
+}
+
+/**
+ * Improve Linear Search Worst-Case Complexity
+ * */
+fun linearSearch2(array: Array<Int>, x: Int): Int {
+    var left = 0
+    var right = array.size - 1
+
+    while (left <= right) {
+        when (x) {
+            array[left] -> return left
+            array[right] -> return right
+            else -> {
+                left++
+                right--
+            }
+        }
+    }
+    return -1
+}
+
+fun linearSearch1(array: Array<Int>, x: Int): Int {
+    for (i in 0..array.size) {
+        if (x == array[i]) {
+            return i
+        }
+    }
+    return -1
+}
