@@ -4,6 +4,8 @@ package com.sargis.khlopuzyan.algorithmsgfg.searching
  * Created by Sargis Khlopuzyan, on 6/21/2021.
  *
  * @author Sargis Khlopuzyan (sargis.khlopuzyan@fastshift.com)
+ *
+ * https://www.geeksforgeeks.org/binary-search/
  */
 fun main() {
     val array = arrayOf(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
@@ -14,6 +16,9 @@ fun main() {
         println("Element is present at index $result")
 }
 
+/**
+ * The time complexity of the binary search algorithm is O(log n)
+ * */
 fun binarySearch(array: Array<Int>, left: Int = 0, right: Int = array.size - 1, x: Int): Int {
 
     if (left > right) return -1

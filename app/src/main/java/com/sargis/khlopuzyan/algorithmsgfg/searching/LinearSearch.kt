@@ -4,6 +4,8 @@ package com.sargis.khlopuzyan.algorithmsgfg.searching
  * Created by Sargis Khlopuzyan, on 6/21/2021.
  *
  * @author Sargis Khlopuzyan (sargis.khlopuzyan@fastshift.com)
+ *
+ * https://www.geeksforgeeks.org/linear-search/
  */
 fun main() {
     val array = arrayOf(1, 2, 3, 4, 5, 6, 7, 8, 9)
@@ -38,6 +40,9 @@ fun linearSearch2(array: Array<Int>, x: Int): Int {
     return -1
 }
 
+/**
+ * The time complexity of the linear search algorithm is O(n)
+ * */
 fun linearSearch1(array: Array<Int>, x: Int): Int {
     for (i in 0..array.size) {
         if (x == array[i]) {
