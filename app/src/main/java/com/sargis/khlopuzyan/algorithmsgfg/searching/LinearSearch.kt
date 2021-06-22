@@ -8,8 +8,8 @@ package com.sargis.khlopuzyan.algorithmsgfg.searching
  * https://www.geeksforgeeks.org/linear-search/
  */
 fun main() {
-    val array = arrayOf(1, 2, 3, 4, 5, 6, 7, 8, 9)
-    val result = linearSearch2(array, 5)
+    val array = arrayOf(0, 11, 22, 33, 44, 55, 66, 77, 88, 99, 1010)
+    val result = linearSearch2(array, 55)
 //    val result = linearSearch1(array, 7)
     if (result == -1)
         println("Element is not present in array")
@@ -23,6 +23,7 @@ fun main() {
  * 2) if element Not found O(n) to O(n/2)
  * */
 fun linearSearch2(array: Array<Int>, x: Int): Int {
+
     var left = 0
     var right = array.size - 1
 

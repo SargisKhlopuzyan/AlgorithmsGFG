@@ -8,8 +8,8 @@ package com.sargis.khlopuzyan.algorithmsgfg.searching
  * https://www.geeksforgeeks.org/binary-search/
  */
 fun main() {
-    val array = arrayOf(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
-    val result = binarySearch(array, x = 9)
+    val array = arrayOf(0, 11, 22, 33, 44, 55, 66, 77, 88, 99, 1010)
+    val result = binarySearch(array, x = 99)
     if (result == -1)
         println("Element is not present in array")
     else
