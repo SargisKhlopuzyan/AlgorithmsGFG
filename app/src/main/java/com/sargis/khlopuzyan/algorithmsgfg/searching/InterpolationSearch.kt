@@ -4,6 +4,8 @@ package com.sargis.khlopuzyan.algorithmsgfg.searching
  * Created by Sargis Khlopuzyan, on 6/21/2021.
  *
  * @author Sargis Khlopuzyan (sargis.khlopuzyan@fastshift.com)
+ *
+ * https://www.geeksforgeeks.org/interpolation-search/
  */
 fun main() {
     val array = arrayOf(0, 11, 22, 33, 44, 55, 66, 77, 88, 99, 1010)
@@ -27,7 +29,7 @@ fun interpolationSearch(array: Array<Int>, low: Int = 0, high: Int = array.size 
     if (low <= high && x >= array[low] && x <= array[high]) {
 
         // Probing the position with keeping uniform distribution in mind.
-        pos = low + (high - low) * (x - array[low]) / (array[high] - array[low])
+        pos = low + (x - array[low]) * (high - low) / (array[high] - array[low])
 
         println("Inside interpolationSearch => pos: $pos")
 
